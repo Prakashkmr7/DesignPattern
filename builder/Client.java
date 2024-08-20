@@ -20,6 +20,34 @@ public class Client {
 		Student st=new Student(builder);//this will create student object successfully
 		System.out.println("Debug");
 
+
+
+		
+//
+//		//Way 2 :-Student.getBuilder() is creating the builder object and we are using it to build the student object.
+//		//instead of calling constructor of Student class manually providing build method.
+//		One Ques - Before building object we need to set the Object as well.
+//		Student student=Student.getBuilder()
+//				.setName("Vivek")
+//				.setAge(25)
+//				.setGradYear(2022).build();
+//
+//
+//
+//
+//		Student st=new Student();
+//		Student.Builder builder=new Student.Builder();//we cannot create object of Builder class directly as this is Inner class
+//		builder.setName(null)
+//		This way we can create but its long way.
+//
+//
+//		//One liner
+//
+//		Student student=Student.getBuilder()
+//				.setName("Vivek")
+//				.setAge(25)
+//				.setGradYear(2022).build();
+
 	}
 
 }
