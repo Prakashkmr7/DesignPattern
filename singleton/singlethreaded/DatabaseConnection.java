@@ -1,10 +1,10 @@
 public class DatabaseConnection {
 
-    //private static DatabaseConnection instance= null;
-    //this part is called Early loading or early initialization
-    //private static DatabaseConnection instance=null;
-    private static DatabaseConnection instance = new DatabaseConnection();
-
+    private static DatabaseConnection instance= null;
+    //this part is called Early loading or early initialization.(below line of code)
+    // private static DatabaseConnection instance = new DatabaseConnection(); -this line of code is for early loading 
+//what we are doing in this line is instead of creating obj in if condition we are creating obj at time of initialization as it will load
+//only one time of application start up/ compile time.	
     private DatabaseConnection() {
 
     }
