@@ -1,0 +1,28 @@
+package com.example.LLD.strategy;
+
+public class PathCalculatorFactory {
+
+    //Created these 3 static variables and same if else logic from google class.
+    private static CarPathCalculator carPathCalculator = new CarPathCalculator();
+    private static BikePathCalculator bikePathCalculator = new BikePathCalculator();
+    private static WalkPathCalculator walkPathCalculator = new WalkPathCalculator();
+    private static BusPathClaculator busPathClaculator = new BusPathClaculator();
+
+    public static PathCalculatorStrategy getPathCalculatorForMode(String mode) {
+        if (mode.equals("Car")) {
+            //return new CarPathCalculator();//inplace of this i.e creating object every time doing early initialization and returning
+            //same obj. every time for space optimization.
+            return carPathCalculator;
+        } else if (mode.equals("Bike")) {
+            //return new BikePathCalculator();
+            return bikePathCalculator;
+        } else if (mode.equals("Walk")) {
+            //return new WalkPathCalculator();
+            return walkPathCalculator;
+        } else if (mode.equals("Bus")) {
+            return busPathClaculator;
+        } else {
+            return null;
+        }
+    }
+}
