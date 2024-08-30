@@ -1,0 +1,15 @@
+package com.example.LLD.strategy;
+
+public class Client {
+    public static void main(String[] args) {
+GoogleMaps googleMaps=new GoogleMaps();
+googleMaps.findPath("Delhi","Agra","Bus");//we are just calling
+
+
+        //Strategy - will use when there is multiple ways of doing something.
+        //Loose coupling - as for adding new component Bus strategy we are not doing any code changes in main
+        //class
+
+        //For payment - we can use this Design pattern as we will be allowing multiple payment way.
+    }
+}
