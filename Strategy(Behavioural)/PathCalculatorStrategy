@@ -1,0 +1,6 @@
+package com.example.LLD.strategy;
+
+//Different modes of Transportation will implement this interface.
+public interface PathCalculatorStrategy {
+    void findPath(String fromLocation,String toLocation);
+}
