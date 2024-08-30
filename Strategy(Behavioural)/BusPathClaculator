@@ -1,0 +1,8 @@
+package com.example.LLD.strategy;
+
+public class BusPathClaculator implements PathCalculatorStrategy{
+    @Override
+    public void findPath(String fromLocation, String toLocation) {
+        System.out.println("Bus path");
+    }
+}
