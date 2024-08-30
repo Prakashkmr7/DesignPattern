@@ -1,0 +1,28 @@
+package com.example.LLD.strategy;
+
+public class GoogleMaps {
+
+    public void findPath(String from, String to, String mode) {
+        PathCalculatorStrategy pathCalculatorStrategy;
+//    if(mode.equals("Car"))
+//    {
+//        pathCalculatorStrategy=new CarPathCalculator();
+//    } else if (mode.equals("Bike")) {
+//        pathCalculatorStrategy=new BikePathCalculator();
+//    }
+//    else{
+//        pathCalculatorStrategy=new WalkPathCalculator();
+//    }
+//    pathCalculatorStrategy.findPath(from,to);
+
+        /*
+        this is without using factory - and this code is violating OCP.
+        So we are moving it to some class which will be doing only if - else thing, avoiding that thing in main class
+        as lot of priority things is will be there in this class.We cann't avoid if- else (doing structuring of things).
+        moving this code to factory class -One seperate class.
+        */
+        //No need to create obj as static method and calling method which we pushed(if- else code, so internally handling if- else code.)
+        pathCalculatorStrategy=PathCalculatorFactory.getPathCalculatorForMode(mode);
+        pathCalculatorStrategy.findPath(from,to);
+    }
+}
